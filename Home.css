@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+.header{
+    height: 15vh;
+    padding: 1rem;
+    gap: 60%;
+    align-items: center;
+
+}
+
+.img-fluid{
+    margin-left: 2rem ;
+    height: 30%;
+    width: 30%;
+    object-fit: cover;
+    object-position: 1px 2px;
+}
+
+div.input{
+    padding: 1%;
+    height: 4vh;
+}
+
+.main{
+    padding: 1rem;
+    height: 70vh;
+}
+
+
+.menu{
+    background-color: rgb(223, 248, 255);
+    padding: 1.7rem;
+    gap: 5%;
+    width: 95%;
+    list-style: none;
+}
+
+.menu a{
+    color: black;
+}
+
+table{
+   
+    text-align: center;
+}
+
+.title{
+    padding: 2rem;
+}
+
+.adicionar{
+    text-decoration: none;
+    color: rgb(255, 252, 252);
+}
+
+.options{
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 5%;
+}
+
+.options ul{
+    list-style-type: none;
+}
+
+.options a{
+    list-style: none;
+    text-decoration: none;
+    color: black;
+}
+   
+
+.footer{
+    background-color: rgb(223, 248, 255);
+    padding: 1rem;
+    height: 15vh;
+    text-align: center;
+}
+
+.footer li{
+    list-style: none;
+    padding: 2px;
+    text-align: start;
+}
+
+@media (max-width: 600px){
+    .colEmail{
+        display: none;
+    }
+}
+
