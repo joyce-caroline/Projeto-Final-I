@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Editar</title>
+
+        <link rel="stylesheet" href="Editar.css">
+
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+            crossorigin="anonymous">
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.10.0/css/bootstrap-datepicker.min.css">
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.10.0/js/bootstrap-datepicker.min.js"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+            crossorigin="anonymous">
+            </script>
+
+    </head>
+    <body>
+
+        <header class="container-fluid d-flex header">
+
+            <figure class="figure">
+                <img src="https://assets.stickpng.com/images/633d886a0671dd9c05084ff7.png" alt="Logo" class="img-fluid">
+            </figure>
+
+            <div class="d-flex align-items-center border col-2 input">
+                <input type="text" class="form-control-plaintext"
+                    name="search"
+                    id="search" placeholder="Search">
+                <i class="bi bi-search"></i>
+            </div>
+
+        </header>
+
+        <main class="main container-fluid d-flex flex-column justify-content-center">
+
+            <section class="d-flex justify-content-center">
+                <ul class="d-flex justify-content-center menu border">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="./Home.html">Home</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contato</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">História</a></li>
+
+                </ul>
+            </section>
+
+            <section class="d-grid justify-content-center client">
+                
+                <form action="." class="form">
+                    <h2 class="d-flex justify-content-center">
+                        Inserir / Alterar Cliente
+                    </h2>
+
+                    <div class="form-group row needs-validation">
+                        <label for="nome" class="col-3 d-flex justify-content-end">Nome</label>
+                        <input type="text" class="form-control col-4" id="nome"
+                            name="nome" required>
+                    </div>
+                    
+                    <div class='form-group date row'>
+                        <label for="data" class="form-label col-3 d-flex justify-content-end">
+                            Data de Nascimento
+                        </label>
+                        <input type='hidden' class="form-control" id="my_hidden_input" name="data" required/>
+                        <div id="datePickerInput" class="col-4"></div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="email" class="form-label col-3 d-flex justify-content-end">Email</label>
+                        <input type="email" class="form-control col-4" id="email"
+                            name="email" required>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="sexo" class="col-3 d-flex justify-content-end">Sexo </label>
+                        <select name="sexo" id="sexo" class="form-select col-4" required>
+                            <option value disabled selected>------ Escolha uma
+                                opção -------</option>
+                            <option value>Feminino</option>
+                            <option value>Masculino</option>
+                        </select>
+                    </div>
+                    <div class="submit d-flex justify-content-end">
+                        <button type="button" class="btn btn-danger btn-lg"><a href="./Home.html">Cancelar</a></button>
+                        <button type="submit" class="btn btn-success btn-lg"><a href="." class="nav-link"
+                            data-bs-toggle="modal"
+                            data-bs-target="#myModal">Sucesso</a></button>
+                    </div>
+                </form>
+            </section>
+
+        </main>
+
+        <footer class="footer container-fluid d-flex justify-content-between">
+            <ul class="address col-4">
+                <li>
+                    Sugestões
+                </li>
+                <li>
+                    Ouvidoria
+                </li>
+                <li>
+                    Políticas de Privacidade
+                </li>
+                <li>
+                    Visão e Valores
+                </li>
+            </ul>
+            <div class="col-4">
+                <p>Avenida Brasil, nr 100, 7400000, Brasil</p>
+            </div>
+        </footer>
+
+        <div class="modal fade" id="myModal">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="ModalLabel">Sucesso</h1>
+                        <button type="button" class="btn-close"
+                            data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Cliente salvo com sucesso.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            $(document).ready(function() {
+              $('#datePickerInput').datepicker({
+                format: 'dd/mm/yyyy',
+                autoclose: false, 
+                todayHighlight: true
+                
+              });
+            });
+            $('#datePickerInput').on('changeDate', function() {
+                 $('#my_hidden_input').val(
+                    $('#datePickerInput').datepicker('getFormattedDate')
+                );
+            });
+          </script>
+
+    </body>
+</html>
