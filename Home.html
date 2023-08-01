@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home</title>
+
+        <link rel="stylesheet" href="Home.css">
+
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+            crossorigin="anonymous">
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    </head>
+
+    <body>
+
+        <header class="container-fluid d-flex header">
+
+            <figure class="figure">
+                <img src="https://assets.stickpng.com/images/633d886a0671dd9c05084ff7.png" alt="Logo" class="img-fluid">
+            </figure>
+
+            <div class="d-flex border align-items-center col-2 input">
+                <input type="text" class="form-control-plaintext"
+                    name="search"
+                    id="search" placeholder="Search">
+                <i class="bi bi-search"></i>
+            </div>
+        </header>
+
+        <main class="main container-fluid d-flex flex-column">
+
+            <section class="d-flex justify-content-center">
+                <ul class="d-flex justify-content-center menu border">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="./Home.html">Home</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contato</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">História</a></li>
+                </ul>
+            </section>
+
+            <section class="cadastros">
+                <div class="d-flex justify-content-end">
+                    <div class="title d-flex justify-content-between col-7">
+                        <h2>Cadastros</h2>
+                        <button type="button" class="btn btn-primary d-flex">
+                            <a href="./Editar.html" class="adicionar">Adicionar &nbsp;</a>
+                            <i class="bi bi-plus-circle"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <table class="table table-striped table-bordered">
+                    <thead>
+                        <tr>
+                            <th>
+                                Id
+                            </th>
+                            <th>
+                                Nome
+                            </th>
+                            <th>
+                                Data Nascimento
+                            </th>
+                            <th class="colEmail">
+                                Email
+                            </th>
+                            <th>
+                                Ações
+                            </th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>
+                                1
+                            </td>
+                            <td>
+                                Carlao
+                            </td>
+                            <td>
+                                18/06/1984
+                            </td>
+                            <td class="colEmail">
+                                test@email.com
+                            </td>
+                            <td class="options d-flex">
+                                <nav class="nav">
+                                    <a href="./Editar.html" class="nav-link">Editar
+                                        <i class="bi bi-pencil-fill"></i></a>
+                                    <a href class="nav-link"
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#myModal">Excluir <i
+                                            class="bi bi-trash3-fill"></i></a>
+                                </nav>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                2
+                            </td>
+                            <td>
+                                Elisabete
+                            </td>
+                            <td>
+                                20/12/2000
+                            </td>
+                            <td class="colEmail">
+                                bete@gmail.com
+                            </td>
+                            <td class="options d-flex">
+                                <nav class="nav">
+                                    <a href="./Editar.html" class="nav-link">Editar
+                                        <i class="bi bi-pencil-fill"></i></a>
+                                    <a href class="nav-link"
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#myModal">Excluir <i
+                                            class="bi bi-trash3-fill"></i></a>
+                                </nav>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                3
+                            </td>
+                            <td>
+                                Julia
+                            </td>
+                            <td>
+                                13/12/2020
+                            </td>
+                            <td class="colEmail">
+                                juju.docinho@hotmail.com
+                            </td>
+                            <td class="options d-flex">
+                                <nav class="nav">
+                                    <a href="./Editar.html" class="nav-link">Editar
+                                        <i class="bi bi-pencil-fill"></i></a>
+                                    <a href class="nav-link"
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#myModal">Excluir <i
+                                            class="bi bi-trash3-fill"></i></a>
+                                </nav>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+
+        <footer class="footer container-fluid d-flex justify-content-between">
+            <ul class="address col-4">
+                <li>
+                    Sugestões
+                </li>
+                <li>
+                    Ouvidoria
+                </li>
+                <li>
+                    Visão e Valores
+                </li>
+            </ul>
+            <div class="col-4">
+                <p>Avenida Brasil, nr 100, 7400000, Brasil</p>
+            </div>
+        </footer>
+
+        <div class="modal fade" id="myModal">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="ModalLabel">Excluir
+                            Cliente</h1>
+                        <button type="button" class="btn-close"
+                            data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Deseja realmente excluir este cliente?</p>
+                    </div>
+                    <div class="modal-footer d-flex justify-content-center">
+                        <button type="button" class="btn btn-primary col-5"
+                            data-bs-dismiss="modal">Não</button>
+                        <button type="button" class="btn btn-danger col-5">Sim</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+            crossorigin="anonymous"></script>
+    </body>
+</html>
